@@ -84,9 +84,9 @@
         const secHand = document.querySelector('.second-hand');
 
         // ustawienie wskazówek na właściwe położenie
-        hourHand.style.transform = `rotate(${90 + (hour % 12) * 30 + (min % 60) * 0.5}deg)`;
-        minHand.style.transform = `rotate(${90 + (min % 60) * 6}deg)`;
-        secHand.style.transform = `rotate(${90 + (sec % 60) * 6}deg)`;
+        hourHand.style.transform = `rotate(${90 + (hour % 12) * 360/12 + (min % 60) * 360/12/60}deg)`;
+        minHand.style.transform = `rotate(${90 + (min % 60) * 360/60 + (sec % 60) * 360/60/60}deg)`;
+        secHand.style.transform = `rotate(${90 + (sec % 60) * 360/60}deg)`;
     }
 
     function showCurrentTimeOnClock(){
@@ -95,8 +95,7 @@
         showTimeOnClock(date.getHours(), date.getMinutes(), date.getSeconds());
     }
 
-    let clock = setInterval(showCurrentTimeOnClock, 1000);
-    // showCurrentTimeOnClock();
+    setInterval(showCurrentTimeOnClock, 1000);
 
   </script>
 </body>
