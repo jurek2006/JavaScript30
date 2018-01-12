@@ -54,6 +54,7 @@ progress.addEventListener('click', scrub);
 progress.addEventListener('mousemove', (evt) => mousedown && scrub(evt)); //jeśli mousedown jest tru to wywoła scrub
 progress.addEventListener('mousedown', () => mousedown = true);
 progress.addEventListener('mouseup', () => mousedown = false);
+progress.addEventListener('mouseleave', () => mousedown = false);
 
 // dodać przycisk fullscreen
 // poprawić błąd przy przewijaniu paska postępu, gdy wyjedzie się myszą za niego
