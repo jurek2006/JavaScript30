@@ -48,6 +48,10 @@ nav {
   z-index: 1;
 }
 
+.fixed{
+  position: fixed;
+}
+
 nav ul {
   margin: 0;
   padding:0;
@@ -72,6 +76,10 @@ li.logo {
   font-size: 30px;
 }
 
+nav.fixed li.logo{
+  max-width: 500px;
+}
+
 li.logo a {
   color:black;
 }
@@ -84,3 +92,4 @@ nav a {
   transition:all 0.2s;
   text-transform: uppercase;
 }
+
